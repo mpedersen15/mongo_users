@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/users_test');
-
 mongoose.Promise = global.Promise;
 
 before((done) => {
