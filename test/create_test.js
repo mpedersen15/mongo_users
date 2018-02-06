@@ -7,7 +7,10 @@ describe('Creating Records', () => {
     it('should save a user', (done) => {
         const joe = new User({ name: 'Joe' });
 
-        joe.save(done);
+        joe.save().then(() => {
+            assert(!joe.isNew);
+            done();
+        });
     });
 
 });
